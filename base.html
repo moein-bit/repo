@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    
+    <link rel="stylesheet"  type="text/css" href="./main.css">
+    <title>SICoMS</title>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+          <div class="container">
+            <a class="navbar-brand mr-4" href="{% url 'blog-home' %}" id="sic-title">SICoMS</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarToggle">
+              <div class="navbar-nav mr-auto">
+                <a class="nav-item nav-link" href="{% url 'blog-home' %}">Home</a>
+                <a class="nav-item nav-link" href="{% url 'blog-about' %}">About</a>
+              </div>
+              <!-- Navbar Right Side -->
+              <div class="navbar-nav">
+                <a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
+                <a class="nav-item nav-link" href="{% url 'register' %}">Register</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <main role="main" class="container">
+        <div class="row">
+          <div class="col-md-8">
+            
+            <article class="media content-section">
+              <img  class="rounded-circle article-img" src="./me.jpg" alt="">
+              <div class="media-body" id="this">
+                <div class="article-metadata">
+                  <a class="mr-2" href="{% url 'user-posts' post.author.username %}">Moein</a>
+                  <small class="text-muted">June 20th, 2020</small>
+                </div>
+                <h2><a class="article-title" href="{% url 'post-detail' post.id %}">First Post</a></h2>
+                <img alt="" class="article-img-main" src="./bc.jpg">
+                <p class="article-content">blah blah blah</p>
+              </div>
+            </article>
+            
+            <label for="exm">Dummy Input</label>
+            <input type="text" name="exm" id="exm" value="just show sth"><br>
+
+            <input type="checkbox" name="ch" value="This One"> Check this one out <br>
+            <input type="number" name="balance" /> <br>
+            <input type="range" name="movie-rating" min="0" max="10" step="0.1"><br>
+            <select name="rental-option">
+              <option value="small">Small</option>
+              <option value="family">Family Sedan</option>
+              <option value="lux">Luxury</option>
+            </select> <br>
+
+            <form method="post" action="http://server1">
+              Enter your name:
+              <input type="text" name="fname">
+              <br/>
+              Enter your age:
+              <input type="text" name="age">
+              <br/>
+              <input type="submit" value="Click Me">
+            </form>
+
+          </div>
+          <div class="col-md-4">
+            <div class="content-section">
+              <h3>Sidebar</h3>
+              <p class='text-muted'>You can put any information here you'd like.
+                <ul class="list-group">
+                  <li class="list-group-item list-group-item-light">Latest Events</li>
+                  <li class="list-group-item list-group-item-light">Calls for registeration</li>
+                  <li class="list-group-item list-group-item-light">etc</li>
+                </ul>
+              </p>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="page-footer font-small blue">
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2020 Copyright:
+          <a href="#"> SICoMS.com</a>
+        </div>
+        <!-- Copyright -->
+      
+      </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+
+</html>
